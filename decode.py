@@ -282,7 +282,9 @@ save = str(decrypted,'ascii')
 save_2 = save
 
 part1 = save_2.split('gold": ')[0]
-part3 = save_2.split('gold": ')[1][3:]
+# part3 = save_2.split('gold": ')[1][3:]
+part3 = save_2.split('gold": ')[1][len(save.split('gold": ')[1].split(',')[0]):] # only erase up to the length of the gold variable
+
 part2 = 'gold": '+'9999'
 save_2 = part1+part2+part3
 
